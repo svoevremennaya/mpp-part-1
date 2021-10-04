@@ -1,0 +1,7 @@
+d:\_BSUIR\.git\mpp\lab_1\ThreadPool\ThreadPool\bin\Debug\ThreadPool.exe.config
+d:\_BSUIR\.git\mpp\lab_1\ThreadPool\ThreadPool\bin\Debug\ThreadPool.exe
+d:\_BSUIR\.git\mpp\lab_1\ThreadPool\ThreadPool\bin\Debug\ThreadPool.pdb
+d:\_BSUIR\.git\mpp\lab_1\ThreadPool\ThreadPool\obj\Debug\ThreadPool.csproj.AssemblyReference.cache
+d:\_BSUIR\.git\mpp\lab_1\ThreadPool\ThreadPool\obj\Debug\ThreadPool.csproj.CoreCompileInputs.cache
+d:\_BSUIR\.git\mpp\lab_1\ThreadPool\ThreadPool\obj\Debug\ThreadPool.exe
+d:\_BSUIR\.git\mpp\lab_1\ThreadPool\ThreadPool\obj\Debug\ThreadPool.pdb
