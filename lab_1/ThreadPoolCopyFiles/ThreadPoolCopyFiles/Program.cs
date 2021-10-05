@@ -39,6 +39,7 @@ namespace ThreadPoolCopyFiles
             while (taskQueue.taskQueue.Count > 0) { };
             taskQueue.AbortThreads();
             while (taskQueue.workingThreads.Contains(true)) { };
+            Console.WriteLine();
             Console.WriteLine($"Copied {taskQueue.copiedFiles} files");
             Console.ReadLine();
         }

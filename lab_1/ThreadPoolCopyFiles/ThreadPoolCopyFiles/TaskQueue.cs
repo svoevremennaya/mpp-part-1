@@ -15,6 +15,7 @@ namespace ThreadPoolCopyFiles
         public Queue<string> taskQueue = new Queue<string>();
         public int copiedFiles;
         public string destPath;
+        private object obj = new object();
 
         public TaskQueue(int threadNumber, string dest)
         {
@@ -39,20 +40,25 @@ namespace ThreadPoolCopyFiles
 
         public void ExecuteTask()
         {
+
             workingThreads[Convert.ToInt32(Thread.CurrentThread.Name)] = true;
             while (Thread.CurrentThread.IsBackground)
             {
-                if (taskQueue.Count > 0)
+                lock (obj)
                 {
-                    string path = taskQueue.Dequeue();
-                    if (path != null)
+                    if (taskQueue.Count > 0)
                     {
-                        CopyFile(path);
+                        string path = taskQueue.Dequeue();
+
+                        if (path != null)
+                        {
+                            CopyFile(path);
+                        }
                     }
-                }
-                else
-                {
-                    Thread.Sleep(50);
+                    else
+                    {
+                        Thread.Sleep(50);
+                    }
                 }
             }
             workingThreads[Convert.ToInt32(Thread.CurrentThread.Name)] = false;
@@ -62,7 +68,11 @@ namespace ThreadPoolCopyFiles
         {
             FileInfo file = new FileInfo(srcPath);
             file.CopyTo(Path.Combine(destPath, file.Name));
-            copiedFiles++;
+            lock (obj)
+            {
+                copiedFiles++;
+            }
+
             Console.WriteLine($"{srcPath} copied");
         }
 
