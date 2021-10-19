@@ -20,14 +20,16 @@ namespace BinarySemaphore
             {
                 spinner.SpinOnce();
             }
+            Console.WriteLine("Mutex locked");
         }
 
         public void Unlock()
         {
-            if (Interlocked.CompareExchange(ref lockedThread, 0, currentThreadID) != currentThreadID)
+            if (Interlocked.CompareExchange(ref lockedThread, unlockedThread, currentThreadID) != currentThreadID)
             {
                 return;
             }
+            Console.WriteLine("Mutex unlocked");
         }
     }
 }
