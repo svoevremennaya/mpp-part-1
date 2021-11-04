@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogBuffer", "LogBuffer\LogBuffer.csproj", "{68BA2432-DD91-4F6F-8653-0E47389246C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68BA2432-DD91-4F6F-8653-0E47389246C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68BA2432-DD91-4F6F-8653-0E47389246C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68BA2432-DD91-4F6F-8653-0E47389246C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68BA2432-DD91-4F6F-8653-0E47389246C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0AA9889B-9FA6-49D2-AE8C-A6FD9FA4C3DB}
+	EndGlobalSection
+EndGlobal

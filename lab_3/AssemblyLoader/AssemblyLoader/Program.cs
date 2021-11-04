@@ -32,6 +32,7 @@ namespace AssemblyLoader
             {
                 Console.WriteLine(type.FullName);
 
+                Console.WriteLine("  Fields: ");
                 foreach(FieldInfo field in type.GetFields())
                 {
                     if (field.IsPublic)
@@ -40,6 +41,7 @@ namespace AssemblyLoader
                     }
                 }
 
+                Console.WriteLine("Methods: ");
                 foreach(MethodInfo method in type.GetMethods())
                 {
                     if (method.IsPublic)
