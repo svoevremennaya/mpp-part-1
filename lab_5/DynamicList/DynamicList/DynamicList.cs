@@ -10,7 +10,7 @@ namespace DynamicList
     public class DynamicList<T> : IEnumerable
     {
         private T[] list;
-        public int Count { get; private set; }
+        public int Count;
 
         public DynamicList()
         {
@@ -56,6 +56,10 @@ namespace DynamicList
                 list = list.Where((val, ind) => ind != index).ToArray();
                 Count--;
             }
+            else
+            {
+                throw new IndexOutOfRangeException();
+            }
         }
 
         public void Clear()
@@ -68,15 +72,28 @@ namespace DynamicList
         {
             get
             {
-                return list[index];
+                if (index >= 0 && index < Count)
+                {
+                    return list[index];
+                }
+                else
+                {
+                    throw new IndexOutOfRangeException();
+                }
             }
 
             set
             {
-                list[index] = value;
+                if (index >= 0 && index < Count)
+                {
+                    list[index] = value;
+                }
+                else
+                {
+                    throw new IndexOutOfRangeException();
+                }
             }
         }
-
 
         public IEnumerator GetEnumerator()
         {
